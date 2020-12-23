@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+import ToDoList from './components/todolist.comonent';
+import ToDoList from './styles/todolist.comonent';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class ToDoApp extends React.Component {
+  constructor(props){
+    super(props);
+  }
 
-export default App;
+  render() {
+    return (
+      <div>
+        <h2>A faire</h2>
+        <ToDoList />
+      </div>
+    )
+  } 
+
+
+
+
+}
+export default ToDoApp;
